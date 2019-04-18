@@ -1,0 +1,182 @@
+body, html {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	-webkit-font-smoothing: antialiased;
+	font-smooth: always;
+	overflow: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+#canvas-container {
+	position: absolute;
+	top: 5%;
+	left: 0;
+}
+
+#loading-page {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #000;
+	z-index: 3;
+}
+
+#bfly-logo {
+	position: absolute;
+	top: 25%;
+	left: 3%;
+	width: 20%;
+	opacity: 0;
+}
+
+#quote-generator {
+	margin-top: 20%;
+	margin-left: 38%;
+	font-weight: lighter;
+	font-style: italic;
+	font-size: 200%;
+	color: #fff;
+	width: 50%;
+	opacity: 0;
+}
+
+#title-box {
+	position: absolute;
+	top: 25%;
+	left: 5%;
+	font-family: Helvetica, sans-serif;
+	color: #000;
+	z-index: 1;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+}
+
+#mrg-logo {
+	width: 25%;
+	margin: 0;
+	padding: 0;
+}
+
+#title-box h1 {
+	font-size: 500%;
+	margin-bottom: 0;
+	font-weight: bolder;
+	font-style: italic;
+}
+
+#title-box p {
+	font-size: 120%;
+	font-weight: bolder;
+	font-style: italic;
+}
+
+#navigation-section {
+	position: absolute;
+	top: 35%;
+	left: 85%;
+	font-family: Helvetica, sans-serif;
+	color: #000;
+	z-index: 2;
+}
+
+#navigation-section li {
+	list-style: none;
+	margin-bottom: 15%;
+	margin-right: -20%;
+	cursor: pointer;
+	padding: 10%;
+}
+
+#navigation-section li:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+#details-container {
+	position: absolute;
+	top: 35%;
+	left: 5%;
+	width: 30%;
+	font-family: Helvetica, sans-serif;
+	font-size: 110%;
+	font-style: italic;
+	display: none;
+}
+
+#details-container p {
+	line-height: 140%;
+}
+
+#archive-description {
+	display: none;
+}
+
+#about-description {
+	display: none;
+}
+
+#about-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	font-family: Helvetica, sans-serif;
+}
+
+#archive-section {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 500%;
+	width: 100%;
+	display: none;
+	overflow-y: scroll;
+}
+
+#archive-section img {
+	position: absolute;
+}
+
+#archive-gallery-intro {
+	position: absolute;
+	top: 10%;
+	left: 35%;
+	padding: 1%;
+	width: 35%;
+	text-align: center;
+	background-color: #000;
+	color: #fff;
+	font-family: Helvetica, sans-serif;
+	font-style: italic;
+	font-weight: bolder;
+	line-height: 30px;
+}
+
+/*MEDIA QUERY*/
+@media (min-width: 320px) and (max-width: 480px) {
+  
+	#mrg-logo {
+		text-align: center;
+		width: 90%;
+	}
+
+	#title-box {
+		top: 5%;
+	}
+
+	#title-box p {
+		text-align: center;
+		display: none;
+	}
+  
+}
