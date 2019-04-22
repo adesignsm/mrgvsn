@@ -92,14 +92,6 @@ var archiveBtn = document.getElementById("archive-li");
 var ssBtn = document.getElementById("ss-li");
 var aboutBtn = document.getElementById("about-li");
 
-titleBtn.onmousedown = function(event) {
-
-	console.log("clicked");
-
-	scene.add(mirror);
-	scene.add(mirrorFrame);
-}
-
 archiveBtn.onmousedown = function(event) {
 
 	console.log("clicked");

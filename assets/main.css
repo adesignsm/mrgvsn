@@ -5,18 +5,11 @@ body, html {
 	width: 100%;
 	-webkit-font-smoothing: antialiased;
 	font-smooth: always;
-	overflow: hidden;
 }
 
 a {
 	text-decoration: none;
 	color: #000;
-}
-
-#canvas-container {
-	position: absolute;
-	top: 5%;
-	left: 0;
 }
 
 #loading-page {
@@ -85,7 +78,7 @@ a {
 	left: 85%;
 	font-family: Helvetica, sans-serif;
 	color: #000;
-	z-index: 2;
+	z-index: 3;
 }
 
 #navigation-section li {
@@ -110,6 +103,7 @@ a {
 	font-size: 110%;
 	font-style: italic;
 	display: none;
+	z-index: 2;
 }
 
 #details-container p {
@@ -130,6 +124,7 @@ a {
 	left: 0;
 	height: 100%;
 	width: 100%;
+	display: none;
 	font-family: Helvetica, sans-serif;
 }
 
@@ -140,26 +135,18 @@ a {
 	height: 500%;
 	width: 100%;
 	display: none;
-	overflow-y: scroll;
+	z-index: 2;
 }
 
-#archive-section img {
+#archive-gallery {
 	position: absolute;
+	top: 20%;
+	left: 10%;
+	display: inline-block;
 }
 
-#archive-gallery-intro {
-	position: absolute;
-	top: 10%;
-	left: 35%;
-	padding: 1%;
-	width: 35%;
-	text-align: center;
-	background-color: #000;
-	color: #fff;
-	font-family: Helvetica, sans-serif;
-	font-style: italic;
-	font-weight: bolder;
-	line-height: 30px;
+#archive-gallery img {
+	width: 30%;
 }
 
 /*MEDIA QUERY*/
@@ -171,12 +158,67 @@ a {
 	}
 
 	#title-box {
+		position: fixed;
 		top: 5%;
+		left: 8%;
 	}
 
 	#title-box p {
 		text-align: center;
 		display: none;
+	}
+
+	#canvas-container {
+		position: absolute;
+		top: 15%;
+		left: 0;
+	}
+
+	#navigation-section {
+		position: fixed;
+		top: 22%;
+		left: 17%;
+	}
+
+	#navigation-section ul {
+		width: 100%;
+	}
+
+	#navigation-section li {
+		display: inline;
+		padding: 0;
+		margin-right: 5%;
+	}
+
+	#navigation-section li:hover {
+		color: #000;
+		background-color: transparent;
+	}
+
+	#details-container {
+		position: fixed;
+		left: 0;
+		width: 100%;
+	}
+
+	#details-container h1 {
+		text-align: center;
+	}
+
+	#details-container p {
+		font-size: 140%;
+		padding: 10%;
+		text-align: center;
+	}
+
+	#archive-gallery {
+		top: 20%;
+	}
+
+	#archive-gallery img {
+		margin: 5%;
+		padding-bottom: 50%;
+		width: 90%;
 	}
   
 }

@@ -8,6 +8,7 @@ $(document).ready(function() {
 	var $archiveP = $("#archive-description");
 	var $aboutP = $("#about-description");
 
+	var $aboutSection = $("#about-section");
 	var $archiveSection = $("#archive-section");
 
 	var $detailsContainer = $("#details-container");
@@ -23,15 +24,6 @@ $(document).ready(function() {
 	$loadingImg.delay(2000).animate({opacity: "1", left: "5%"}, 1500);
 	$loadingPage.delay(4500).fadeOut(800);
 
-	$mainText.on("click", function() {
-
-		$detailsContainer.fadeOut(600);
-
-		$mainText.delay(400).animate({top: "25%"}, 500);
-		
-
-	});
-
 	$archiveLi.on("click", function() {
 
 		$mainText.animate({top: "3%"}, 500);
@@ -39,6 +31,9 @@ $(document).ready(function() {
 		$detailsContainer.delay(400).fadeIn(600);
 		$archiveP.delay(400).fadeIn(600);
 		$aboutP.fadeOut(600);
+
+		$aboutSection.fadeOut(500);
+		$archiveSection.fadeIn(600);
 
 		$("#details-container h1").text("ARCHIVE");
 		
@@ -51,6 +46,9 @@ $(document).ready(function() {
 		$detailsContainer.delay(400).fadeIn(600);
 		$aboutP.delay(400).fadeIn(600);
 		$archiveP.fadeOut(600);
+
+		$archiveSection.fadeOut(500);
+		$aboutSection.fadeIn(600);
 
 		$("#details-container h1").text("ABOUT");
 
@@ -65,4 +63,20 @@ $(document).ready(function() {
 
 		$addToCartBtn.css({"color" : "#000", "backgroundColor" : "#fff"});
 	});
+});
+
+$(window).scroll(function() {
+
+	if ($("body").scrollTop() > 150 || $("html").scrollTop() > 150) {
+
+		$("#title-box").fadeOut(300);
+		$("#details-container").fadeOut(300);
+		$("#navigation-section").fadeOut(300);
+	
+	} else {
+
+		$("#title-box").fadeIn(300);
+		$("#details-container").fadeIn(300);
+		$("#navigation-section").fadeIn(300);	
+	}
 });
