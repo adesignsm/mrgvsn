@@ -22,6 +22,13 @@ a {
 	z-index: 3;
 }
 
+#loading-page canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
 #bfly-logo {
 	position: absolute;
 	top: 25%;
@@ -155,6 +162,10 @@ a {
 	#mrg-logo {
 		text-align: center;
 		width: 90%;
+	}
+
+	#loading-page canvas {
+		display: block;
 	}
 
 	#title-box {
